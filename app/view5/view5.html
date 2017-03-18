@@ -1,0 +1,12 @@
+<div ng-controller="roughWorkController">
+{{cost | currency:'&#8377;' }}
+    <table class="table-striped table">
+        <tr ng-repeat="product in products">
+            <td>{{product.name}}</td>
+            <td>{{product.price | currency:'&#8377;' }}</td>    
+        </tr>
+    </table>
+    <uib-tabset active="2" type="pills">
+        <uib-tab ng-repeat="tab in tabs" heading="{{tab.name}}">{{tab.value}}</uib-tab>
+    </uib-tabset>
+</div>

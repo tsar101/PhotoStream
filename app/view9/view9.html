@@ -1,0 +1,32 @@
+<div ng-controller='photoPlayerController'>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <img ng-src="{{displayImage.imgUrl}}">
+                <div class="caption">
+                    <h6>Album Id : {{displayImage.albumid}}</h6>
+                    <p>{{displayImage.text}}</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-info" ng-click="playFunc()">Play/Pause</button>
+                <button type="button" class="btn btn-info" ng-click="faster()">Speed Up !!</button>
+                <button type="button" class="btn btn-info" ng-click="slower()">Slow Down !!</button>
+            </div>
+        </div>
+    </div>
+    <style>
+        img {
+            width: 100%;
+            /* or any custom size */
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .caption {
+            position: absolute;
+            top: 75%;
+            left: 10%;
+            width: 80%;
+        }
+    </style>

@@ -1,0 +1,29 @@
+
+
+<div ng-controller="photoPlayerController">
+  <div class="container-fluid">
+ <div class="row">
+      <div class="col-lg-6">
+               <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                  <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                     <img ng-src="{{slide.image}}" style="margin:auto; width: auto;max-height: 300px">
+                     <div class="carousel-caption">
+                        <h4>Album Id {{slide.albumId}}</h4>
+                        <p>{{slide.text}}</p>
+                     </div>
+                  </div>
+               </div>
+ </div>
+      
+    <div class="col-md-6">
+      <button type="button" class="btn btn-info" ng-click="play()">Play/Pause</button>
+      
+   
+  </div>
+</div>      
+</div>
+
+<style>
+.carousel-indicators li { visibility: hidden; }
+    
+</style>

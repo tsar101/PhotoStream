@@ -1,0 +1,34 @@
+<div ng-controller="albumController">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                    <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                        <img ng-src="{{slide.image}}" style="margin:auto; width: auto;max-height: 300px">
+                        <div class="carousel-caption">
+                            <h4>Album Id {{slide.albumid}}</h4>
+                            <p>{{slide.text}}</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <button type="button" class="btn btn-info" ng-click="play()">Play/Pause</button>
+                <div class="input-group">
+                    <span class="input-group-addon">Album Number</span>
+                    <input id="inputAlbum" type="text" class="form-control" name="album" placeholder="Enter the AlbumNumber" ng-model="input.albumNumber" uib-tooltip="Enter the album number !" tooltip-placement="top" tooltip-trigger="mouseenter">
+                    <a type="button" class="btn btn-default" ng-click="changeAlbum()">Display Album !</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .carousel-indicators li {
+            visibility: hidden;
+        }
+    </style>

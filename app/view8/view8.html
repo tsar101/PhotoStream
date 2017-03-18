@@ -1,0 +1,33 @@
+<div ng-controller='scrollerController'>
+    <div class="container-fluid">
+        <div class="row">
+            <div infinite-scroll='loadMore()' infinite-scroll-distance='2'>
+                <div ng-repeat='image in images'>
+                    <div class="clearfix" ng-if="image.id % 3 == 0"></div>
+                    <div class="col-lg-4">
+                        <img ng-src="{{image.url}}">
+                        <div class="caption">
+                            <h6>Album Id : {{image.albumid}}</h6>
+                            <p>{{image.text}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        img {
+            width: 100%;
+            /* or any custom size */
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .caption {
+            position: absolute;
+            top: 75%;
+            left: 10%;
+            width: 80%;
+        }
+    </style>
