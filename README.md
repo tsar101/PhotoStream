@@ -1,3 +1,23 @@
+# `Photo-Stream app` — built on top of Angular seed
+Other than angularJs this uses bootstrap,bootstrapAngular as well ngInfiniteScroll,complete info on dependencies can be viewed in bower.json
+
+## Core-functionalites
+the core functionalities have been implemented in folders view6-view9,the corresponding entries are visible in index.html
+
+# Functionality-Simple Photo Player
+This is implemented in folder view6 and uses bootsrap carousal(using bootstrap directives) to implement a photo-player 
+
+# Functionality-Album Wise Player
+This is implemented in folder view7 (built on top of view 6) and displays photos of only a particular album number entered in digit format.
+
+# Functionality-Infinite Scroll
+This is implemented in folder view8 and loads the images as an infinite scroll,finer point implemented is the use of bootstrap clearfix class to set rows after every 3 images col-lg-4.To view this in action it is suggested to change image sizes in data/load.json from http://placehold.it/15/d4f82e to http://placehold.it/600/d4f82e
+
+# Functionality-Active Photo Player
+This is implemented in folder view9 and loads the images in a player that gives options like play/pause/speed-up and speed-down.Does not make use of bootstrap carousal.
+
+
+
 # `angular-seed` — the seed for AngularJS apps
 
 This project is an application skeleton for a typical [AngularJS][angularjs] web app. You can use it
